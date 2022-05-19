@@ -1,0 +1,271 @@
+@font-face{
+    font-family: 'Adiwangsa';
+    font-weight: 400;
+    src: url(fonts/Adiwangsa-Regular.ttf) format('truetype'), url(fonts/Adiwangsa-Regular.otf) format('otf');
+}
+@font-face{
+    font-family: 'Adiwangsa-script';
+    font-weight: 400;
+    src: url(fonts/Adiwangsa-Script.ttf) format('truetype'), url(fonts/Adiwangsa-Script.otf) format('otf');
+}
+
+:root{
+    --clr-bl:white;
+    --clr-noir:black;
+    --clr-foncefonce:#2d3142;
+    --clr-fonce:#4f5d75;
+    --clr-clair:#bfc0c0;
+    --clr-colore:#c69c6d; /*#c69c6d #ef8354*/
+}
+
+html{
+    font-size: 20px;
+    font-family: 'Adiwangsa';
+}
+
+/* -------------------COULEURS------------------------------- */
+.clr-fonce{
+    background-color: var(--clr-fonce);
+}
+.clr-clair{
+    background-color: var(--clr-clair);
+}
+.clr-colore{
+    background-color: var(--clr-colore);
+}
+.clr-bl{
+    background-color: var(--clr-bl);
+}
+.txt-bl{
+    color:var(--clr-bl);
+}
+.txt-noir{
+    color:var(--clr-noir);
+}
+.txt-colore{
+    color:var(--clr-colore);
+}
+
+/* -------------------TEXTE------------------------------- */
+.txt-center{
+    text-align: center;
+    margin:0;
+}
+h2{
+    margin:0;
+    font-size: 2.5em;
+}
+
+
+/* --------------------BODY------------------------------ */
+
+body{
+    margin:0;
+    letter-spacing: 0.123rem;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+.pdd-top{
+    padding-top: 4%;
+}
+.pdd-top-xl{
+    padding-top: 4%;
+}
+.pdd-btm{
+    padding-bottom: 2%;
+}
+.pdd-l{
+    padding-left: 3%;
+}
+.pdd-r{
+    padding-right: 3%;
+}
+
+/* ---------------------HEADER----------------------------- */
+header{
+    background: url(../img/food-banner-1024x569.jpg) no-repeat;
+    background-position: 20% 30%;
+    background-size: cover;
+    background-color: var(--clr-fonce); /* Le temps que l'image se charge */
+    height: 250px;
+
+}
+    .banner{
+        width:100%;
+    }
+
+/* ---------------------NAVBAR----------------------------- */
+/* --- MENU --- */
+.topnav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--clr-fonce);
+    width:100%;
+    height:auto;
+    z-index:99;
+    margin:0;
+    position:sticky;
+    top:0;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);
+}
+    .topnav a {
+        color: var(--clr-clair);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 1em;
+    }
+    /* Logo */
+    .topnav :first-child {
+        padding: 0;
+        height:55.2px;
+    }
+    .logo{
+        max-height: 60px;
+    }
+        .topnav a:hover {
+            background-color: var(--clr-clair);
+            color: var(--clr-foncefonce);
+        }
+        .topnav a.active {
+            background-color: var(--clr-clair);
+            color: var(--clr-foncefonce);
+        }
+    .topnav .icon {
+        display: none;
+    }
+
+/* ---------------------FLECHE UP----------------------------- */
+#up{
+
+}
+
+/* --------------------CONTAINER 1------------------------------ */
+#fleche{
+    position: relative;
+    top:40px;
+    text-align: center;
+}
+    #fleche img{
+        max-height: 60px;
+    }
+#pointe{
+    margin:0 auto;
+    height: 0;
+    width:0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid var(--clr-colore);
+    
+}
+
+/* ---------------------CONTAINER 2----------------------------- */
+.container{
+    padding-inline: 15%;    
+}
+    .flex-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+        .flex-col{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+            .rond{
+                border-radius: 100%;
+                width: 250px;
+                height: 250px;
+            }
+            .antipasti{
+                background: url(../img/antipasti.jpg) no-repeat;
+                background-size: cover;
+            }
+            .antipasti:hover{
+                filter: grayscale(0.5);
+                filter: brightness(0.3);
+                cursor:pointer;
+            }
+            .pizza{
+                background: url(../img/pizza.jpg) no-repeat;
+                background-size: cover;
+            }
+            .pizza:hover{
+                filter: grayscale(0.5);
+                filter: brightness(0.3);
+                cursor:pointer;
+            }
+            .pasta{
+                background: url(../img/lasagnes.jpg) no-repeat;
+                background-size: cover;
+            }
+            .pasta:hover{
+                filter: grayscale(0.5);
+                filter: brightness(0.3);
+                cursor:pointer;
+            }
+
+/* ---------------------LE CHEF------------------------------------- */
+#lechef p{
+    width: 40%;
+}
+#lechef h2{
+    margin:0;
+    text-align: left;
+    font-size: 2.5em;
+    position: relative;
+    top:1em;
+}
+.phChef{
+    position: relative;
+    top:2em;
+    left:15em;
+    align-items: flex-start;
+    text-align: left;
+    display: flex;
+    justify-content: flex-end;
+}
+    .phChef img{
+        width: 100%;
+    }
+
+
+/* ---------------------OU NOUS TROUVER----------------------------- */
+.adresse{
+    width: 35%;
+}
+#carte {
+    height: 100%;
+    width: 35%;
+    min-height: 300px;
+    min-width: 300px;
+}
+
+/* ---------------------FOOTER----------------------------- */
+footer{
+    /* padding-bottom: 1%; */
+}
+    .logo-footer{
+        max-width: 300px;
+    }
+    .admin{
+    }
+    .admin a{
+        text-decoration: none;
+        color:var(--clr-bl);
+    }
+    .reseaux{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 20%;
+    }
+        .reseaux i{
+            color:var(--clr-colore);
+            min-height: 2em;
+        }
