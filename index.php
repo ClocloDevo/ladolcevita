@@ -109,6 +109,9 @@
 <!-- CONTACT------------------------------------------>
     <div class="container clr-clair pdd-top pdd-btm" id="contact">
         <h2 class="txt-center">Contact</h2>
+        <?php
+            include "form/formDolce.php";
+        ?>
     </div>
     
 <!-- FOOTER------------------------------------------>
