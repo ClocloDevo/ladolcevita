@@ -20,21 +20,21 @@
     </header>
 
     <!-- MENU -------------------------------------------->
-    <!-- <div class="navbar clr-fonce"> -->
+    <div class="navbar clr-fonce">
         <div class="topnav" id="myTopnav">
             <a class="onglet" href="#header"><img src="img/logo-black.png" alt="logo"class="logo"></a>
             <a class="onglet" href="#mangiare">Carte</a>
-            <a class="onglet" href="#lechef">Qui sommes nous ?</a>
+            <a class="onglet" href="#presentation">Qui sommes nous ?</a>
             <a class="onglet" href="#noustrouver">Où nous trouver</a>
             <a class="onglet" href="#contact">Contact</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunctionMenu()">
                 <i class="fa fa-bars"></i>
             </a>  
         </div>
-    <!-- </div> -->
+    </div>
 
     <div id="up">
-        <a id="flecheRetour" class="cInvisible" href="#header"></a>
+        <a id="flecheRetour" class="cInvisible" href="#description"></a>
     </div>
 
     <!-- QUI SOMMES NOUS --------------------------------->
@@ -61,25 +61,34 @@
             </div>
             <div class="flex-col">
                 <div class="rond pizza">
+                    <a href="">
+                        <img src="img/pizza.png" class="icon" alt="">
+                    </a>
                 </div>
                 <h3>Pizza</h3>
             </div>
             <div class="flex-col">
-                <a href="">
-                    <div class="rond pasta"></div>
-                </a>
-                <a href="">
-                    <h3>Pasta</h3>
-                </a>
+                <div class="rond pasta"></div>
+                <h3>Pasta</h3>
+            </div>
+            <div class="flex-col">
+                <div class="rond content">
+                    <div class="content-overlay"></div>
+                    <img class="content-image" src="img/lasagnes.jpg" alt="">
+                    <div class="content-details fadeIn-top">
+                        <img src="img/pasta.png" height="70px" alt="">
+                    </div>
                 </div>
+                <h3>Pasta</h3>
+            </div>
 
         </div>
     </div>
 
     <!-- CHEF------------------------------------------>
-    <div class="clr-bl pdd-top" id="lechef">
+    <div class="container clr-bl pdd-top" id="lechef">
         <h2 class="">il Chef</h2>
-        <div class="flex-row-end">
+        <div class="flex-row">
             <p>Gennaro Contaldo è conosciuto come la leggenda italiana che ha insegnato a Jamie Oliver tutto ciò che sa sulla cucina italiana ed è uno degli chef più amati del Regno Unito, oltre a essere autore di una dozzina di libri di ricette italiane più venduti. <br><br>
 
             Nato a Minori, sulla Costiera Amalfitana, Gennaro è diventato un beniamino della TV grazie al suo spirito italiano e alla sua natura positiva. Partecipa regolarmente a Saturday Kitchen e al suo programma televisivo di grande successo, Two Greedy Italians, sulla BBC2.</p>
@@ -91,9 +100,9 @@
     </div>
     
     <!-- NOUS TROUVER------------------------------------------>
-    <div class="container clr-colore pdd-top pdd-btm" id="noustrouver">
-        <h2 class="txt-center pdd-top-xl pdd-btm-xl">Nous trouver</h2>
-        <div class="flex-row mb-5">
+    <div class="container clr-colore pdd-top pdd-btm" id="#noustrouver">
+        <h2 class="txt-center pdd-top-xl pdd-btm">Nous trouver</h2>
+        <div class="flex-row">
             <!-- MAPS -->
             <div id="carte"></div>
 
@@ -106,20 +115,18 @@
         </div>
     </div>
 
-<!-- CONTACT------------------------------------------>
     <div class="container clr-clair pdd-top pdd-btm" id="contact">
         <h2 class="txt-center">Contact</h2>
     </div>
-    
-<!-- FOOTER------------------------------------------>
+
     <footer class="container clr-fonce">
         <div class="flex-row">
-            <a href="#header"><img src="img/logo-black.png" alt="logo" class="logo-footer"></a>
+            <img src="img/logo-black.png" alt="logo" class="logo-footer">
             <div class="admin flex-col">
                 <a href="politiqueConfidentialite.html">Politique de confidentialité</a>
                 <a href="cookies.html">Cookies</a>
                 <a href="mentionsLegales.html">Mentions légales</a>
-                <small class="txt-center pdd-top">© Cloclo Inc. 2022 | Tous droits réservés</small>
+                <p class="txt-center pdd-top">© Cloclo Inc. 2022 | Tous droits réservés</p>
             </div>
             <div class="reseaux txt-colore">
                 <i class="fa-brands fa-facebook-square fa-2x"></i>
