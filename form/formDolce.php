@@ -9,7 +9,7 @@
             margin:0;
         }
         form {
-            background-color: white;
+            background-color: #c69c6d;
             max-width: 300px;
             box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.2);
             border-radius: 1em;
@@ -23,7 +23,7 @@
             grid-auto-columns: 100%;
         }
         .form-title {
-            color: #c36c6c;
+            color: #2d3142;
             text-align: center;
             font-size: 1.9rem;
             margin-bottom: .4em;
@@ -45,7 +45,7 @@
             font-family: inherit;
             font-size: 1rem;
             font-weight: 400;
-            background-color: #c36c6c;
+            background-color: #2d3142;
             color: white;
             border-radius: 0.2em;
             border: none;
@@ -70,6 +70,7 @@
             color: #fff
         }
     </style>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   
   <body>  
@@ -112,18 +113,19 @@
                 }
             }
                 
-            if (empty($_POST["message"])) {
+            if (empty($_POST["comment"])) {
                 $comment = "";
             } else {
-                $comment = test_input($_POST["message"]);
+                $comment = test_input($_POST["comment"]);
             }
 
+            //Ajouter if captcha est rempli (success)
             $reg_date = date("d-m-Y h:i:sa");
             $requete = "INSERT INTO DolceVitaContact(nom, prenom, email, commentaire, reg_date) VALUES ('$nom','$prenom','$email','$comment','$reg_date')";
             $resultat = mysqli_query($conex,$requete);
             if ($resultat) {
                 ?> 
-                    <h3 class="ok">Inscription réussie !</h3>
+                    <h3 class="ok">Message envoyé avec succès !</h3>
                 <?php
             } else {
                 ?> 
@@ -141,7 +143,7 @@
       
     ?>
 
-    
+
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="form-container">
             <h3 class="form-title">Contactez-nous !</h3>
@@ -157,6 +159,9 @@
             <br><br>
             <textarea placeholder="Message" class="form-input form-input--message" name="comment"><?php echo $comment;?></textarea>
             <br><br>
+            <div>
+                <div class="g-recaptcha" data-sitekey="6Ld_F1kgAAAAAAoiRHKA9gAAlYVAn257mPggROot">></div>
+            </div>
             <input type="submit" class="form-input-btn" name="submit" value="Envoyer">
         </div>
     </form>

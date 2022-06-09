@@ -107,8 +107,7 @@
     </div>
 
 <!-- CONTACT------------------------------------------>
-    <div class="container clr-clair pdd-top pdd-btm" id="contact">
-        <h2 class="txt-center">Contact</h2>
+    <div class="container clr-clair flex-col pdd-top pdd-btm" id="contact">
         <?php
             include "form/formDolce.php";
         ?>
