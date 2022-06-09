@@ -19,14 +19,19 @@
         .form-container {
             width: 100%;
             display: grid;
-            gap: 0.6em;
+            gap: 0.2em;
             grid-auto-columns: 100%;
+            overflow: hidden;
         }
         .form-title {
             color: #2d3142;
             text-align: center;
             font-size: 1.9rem;
+            margin-top: 0.4em;
             margin-bottom: .4em;
+        }
+        .p-form{
+            margin:0;
         }
         .form-input {
             text-align: left;
@@ -93,15 +98,15 @@
                 }
             }
 
-            if (empty($_POST["prenom"])) {
-                $prenomErr = "Prenom est requis";
-            } else {
-                $prenom = test_input($_POST["prenom"]);
-            // check if prenom only contains letters and whitespace
-                if (!preg_match("/^[a-zA-Z-' ]*$/",$prenom)) {
-                    $prenomErr = "Seules les lettres et les espaces sont autorisés";
-                }
-            }
+            // if (empty($_POST["prenom"])) {
+            //     $prenomErr = "Prenom est requis";
+            // } else {
+            //     $prenom = test_input($_POST["prenom"]);
+            // // check if prenom only contains letters and whitespace
+            //     if (!preg_match("/^[a-zA-Z-' ]*$/",$prenom)) {
+            //         $prenomErr = "Seules les lettres et les espaces sont autorisés";
+            //     }
+            // }
 
             if (empty($_POST["email"])) {
                 $emailErr = "Email requis";
@@ -147,13 +152,13 @@
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
         <div class="form-container">
             <h3 class="form-title">Contactez-nous !</h3>
-            <p><span class="error">* champs obligatoires</span></p>
+            <p class="p-form"><span class="error">* champs obligatoires</span></p>
             <input type="text" class="form-input" placeholder="*Nom" name="nom" value="<?php echo $nom;?>">
             <span class="error"><?php echo $nomErr;?></span>
             <br><br>
-            <input type="text" class="form-input" placeholder="*Prénom" name="prenom" value="<?php echo $prenom;?>">
-            <span class="error"><?php echo $prenomErr;?></span>
-            <br><br>
+            <!-- <input type="text" class="form-input" placeholder="*Prénom" name="prenom" value="<?php //echo $prenom;?>"> 
+            <span class="error"><?php //echo $prenomErr;?></span>
+            <br><br>-->
             <input type="text" class="form-input" placeholder="*Courriel" name="email" value="<?php echo $email;?>">
             <span class="error"><?php echo $emailErr;?></span>
             <br><br>

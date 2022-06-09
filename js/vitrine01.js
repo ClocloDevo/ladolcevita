@@ -120,7 +120,7 @@ function initMap() {
     });
       //https://stackoverflow.com/questions/15096461/resize-google-maps-marker-icon-image
     image = {
-      url: "../img/markerDv2.png", // url
+      url: "img/markerDv2.png", // url
       scaledSize: new google.maps.Size(60, 60), // scaled size
       origin: new google.maps.Point(0,0), // origin
     };
